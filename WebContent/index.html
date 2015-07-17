@@ -1,555 +1,67 @@
-
-
-<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<!DOCTYPE html>
 <html>
 <head>
-
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<meta name="Author" content="Bhargav">
-<title>CCTG Bugs Analysis</title>
-
-<style>
-th {
-    background-color: gray;
-    color: white;
-}
-table {
-    border-collapse: collapse;
-    width: 100%;
-    text-align: center;
-}
-table, th, td {
-    border: 1px solid black;
-}
-td {
-    vertical-align: center;
-    padding: 10px;
-}
-</style>
-
+<meta charset="ISO-8859-1">
+<title>Search Bugs</title>
 </head>
 <body>
-	<h1 align="center"
-		style="font-family: 'Lucida Handwriting'; font-size: large; font-style: oblique; background-color: #9999FF">
-		- CCTG Bugs Analysis -</h1>
-	<blockquote></blockquote>
-	<p>
-		Auto-generated Defect Analysis for CCTG Products
-	</p>
 
-	<table>
-		<tbody>
-			<tr>
-				<th><b>Project</b></th>
-				<th><b>S1-S5 Bugs</b></th>
-				<th><b>S1-S3 Bugs</b></th>
-				<th><b>S1-S5 Bugs (Weekly since 01/04/15)</b></th>
-				<th><b>CFD S1-S5 Bugs</b></th>
-				<th><b>Security S1-S3 Bugs</b></th>
-				<th><b>Security S1-S5 Bugs</b></th>
-				<th><b>Security S0 MTTR</b></th>
-				<th><b>Security S1 MTTR</b></th>
-				<th><b>Security S2 MTTR</b></th>
-				<th><b>Org</b></td>
-			</tr>
-			<tr>
-				<td><b>Trains</b></td>
-				<td>
-					<a href="Trains_s1-s5.pdf">152</a>
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:thin-client,magicboat,cca-portal,systools,train,nbr,excalibur,db,mmp,mwm,web-com,telephony,client-com,eureka,webex-user,client-uilib,webex-pt,mobile,app-mc,app-ec,app-ps,app-sc,app-sac,app-st,app-tc,app-webacd,app-framework,video-sharing,wsapi,blis,vtg-integration,it-webex,documentation,platform,client-component,performance,wdfs,api-framework,server,2012pcap,app-coc,app-exe,app-intranets,ec-3rd-party,opencloudplatform,sc-3rd-party  minus Severity:6 minus Attribute:notint30 minus Status:J,U,D,C,R,V">Q:</a>
-					</div>
-				</td>
-				<td>
-					<a href="Trains_s1-s3.pdf">90</a>
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:thin-client,magicboat,cca-portal,systools,train,nbr,excalibur,db,mmp,mwm,web-com,telephony,client-com,eureka,webex-user,client-uilib,webex-pt,mobile,app-mc,app-ec,app-ps,app-sc,app-sac,app-st,app-tc,app-webacd,app-framework,video-sharing,wsapi,blis,vtg-integration,it-webex,documentation,platform,client-component,performance,wdfs,api-framework,server,2012pcap,app-coc,app-exe,app-intranets,ec-3rd-party,opencloudplatform,sc-3rd-party  minus Severity:4,5,6 minus Attribute:notint30 minus Status:J,U,D,C,R,V">Q:</a>
-					</div>
-				</td>
-				<td>
-					<a href="Trains_140701_s1-s5.pdf">152</a>
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:thin-client,magicboat,cca-portal,systools,train,nbr,excalibur,db,mmp,mwm,web-com,telephony,client-com,eureka,webex-user,client-uilib,webex-pt,mobile,app-mc,app-ec,app-ps,app-sc,app-sac,app-st,app-tc,app-webacd,app-framework,video-sharing,wsapi,blis,vtg-integration,it-webex,documentation,platform,client-component,performance,wdfs,api-framework,server,2012pcap,app-coc,app-exe,app-intranets,ec-3rd-party,opencloudplatform,sc-3rd-party  minus Severity:6 minus Attribute:notint30 minus Status:J,U,D,C,R,V">Q:</a>
-					</div>
-				</td>
-				<td>
-					<a href="Trains_cfd.pdf">13
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:thin-client,magicboat,cca-portal,systools,train,nbr,excalibur,db,mmp,mwm,web-com,telephony,client-com,eureka,webex-user,client-uilib,webex-pt,mobile,app-mc,app-ec,app-ps,app-sc,app-sac,app-st,app-tc,app-webacd,app-framework,video-sharing,wsapi,blis,vtg-integration,it-webex,documentation,platform,client-component,performance,wdfs,api-framework,server,2012pcap,app-coc,app-exe,app-intranets,ec-3rd-party,opencloudplatform,sc-3rd-party minus Severity:6  and Found:customer-use minus Attribute:notint30 minus Status:J,U,D,C,R,V">Q:</a>
-					</div>
-				</td>
-				<td>
-					<a href="Trains_sec.pdf">21</a>
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:thin-client,magicboat,cca-portal,systools,train,nbr,excalibur,db,mmp,mwm,web-com,telephony,client-com,eureka,webex-user,client-uilib,webex-pt,mobile,app-mc,app-ec,app-ps,app-sc,app-sac,app-st,app-tc,app-webacd,app-framework,video-sharing,wsapi,blis,vtg-integration,it-webex,documentation,platform,client-component,performance,wdfs,api-framework,server,2012pcap,app-coc,app-exe,app-intranets,ec-3rd-party,opencloudplatform,sc-3rd-party minus Severity:4,5,6 and ( Attribute~psirt OR Attribute~PSIRT ) minus Attribute:notint30 minus Status:J,U,D,C,R,V">Q:</a>
-					</div>
-				</td>
-				<td>
-					<a href="Trains_15sec.pdf">29</a>
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:thin-client,magicboat,cca-portal,systools,train,nbr,excalibur,db,mmp,mwm,web-com,telephony,client-com,eureka,webex-user,client-uilib,webex-pt,mobile,app-mc,app-ec,app-ps,app-sc,app-sac,app-st,app-tc,app-webacd,app-framework,video-sharing,wsapi,blis,vtg-integration,it-webex,documentation,platform,client-component,performance,wdfs,api-framework,server,2012pcap,app-coc,app-exe,app-intranets,ec-3rd-party,opencloudplatform,sc-3rd-party minus Severity:6 and ( Attribute~psirt OR Attribute~PSIRT ) minus Attribute:notint30 minus Status:J,U,D,C,R,V">Q: </a>
-					</div>
-				</td>
-				<td colspan="3">
-					<a
-                    href="http://wwwin-people.cisco.com/bhargavp/publish/test/new/trains_mttr.jpeg">S0-S2 MTTR Chart</a>
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:thin-client,magicboat,cca-portal,systools,train,nbr,excalibur,db,mmp,mwm,web-com,telephony,client-com,eureka,webex-user,client-uilib,webex-pt,mobile,app-mc,app-ec,app-ps,app-sc,app-sac,app-st,app-tc,app-webacd,app-framework,video-sharing,wsapi,blis,vtg-integration,it-webex,documentation,platform,client-component,performance,wdfs,api-framework,server,2012pcap,app-coc,app-exe,app-intranets,ec-3rd-party,opencloudplatform,sc-3rd-party minus Severity:2,3,4,5,6 and ( Attribute~psirt OR Attribute~PSIRT ) minus Attribute~InfoSec-S0 and Status:S{150104:} minus Attribute:notint30 and Status:V{150104:}">Q:</a>
-					</div>
-				</td>
-				<!--<td>
-					<a
-                    href="http://wwwin-people.cisco.com/bhargavp/publish/test/new/Trains_defects.jpeg">S0-S2 Defects-MTTR Chart</a>
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:thin-client,magicboat,cca-portal,systools,train,nbr,excalibur,db,mmp,mwm,web-com,telephony,client-com,eureka,webex-user,client-uilib,webex-pt,mobile,app-mc,app-ec,app-ps,app-sc,app-sac,app-st,app-tc,app-webacd,app-framework,video-sharing,wsapi,blis,vtg-integration,it-webex,documentation,platform,client-component,performance,wdfs,api-framework,server,2012pcap,app-coc,app-exe,app-intranets,ec-3rd-party,opencloudplatform,sc-3rd-party minus Severity:2,3,4,5,6 and ( Attribute~psirt OR Attribute~PSIRT ) minus Attribute~InfoSec-S0 and Status:S{150104:} minus Attribute:notint30 and Status:V{150104:}">Q:</a>
-					</div>
-				</td>-->
-
-				<!--<td>
-					<a
-                    href="Trains_s2mttrtrend.pdf">TTR Chart</a>
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:thin-client,magicboat,cca-portal,systools,train,nbr,excalibur,db,mmp,mwm,web-com,telephony,client-com,eureka,webex-user,client-uilib,webex-pt,mobile,app-mc,app-ec,app-ps,app-sc,app-sac,app-st,app-tc,app-webacd,app-framework,video-sharing,wsapi,blis,vtg-integration,it-webex,documentation,platform,client-component,performance,wdfs,api-framework,server,2012pcap,app-coc,app-exe,app-intranets,ec-3rd-party,opencloudplatform,sc-3rd-party minus Severity:2,3,4,5,6 and ( Attribute~psirt OR Attribute~PSIRT ) minus Attribute~InfoSec-S0 and Status:S{150104:} minus Attribute:notint30 and Status:V{150104:}">Q:</a>
-					</div>
-				</td>-->
-				<td colspan="1" rowspan="6">Bob Ryan</td>
-			</tr>
-
-			<tr>
-				<td><b>Orion</b></td>
-				<td>
-					<a href="orion.pdf">35</a>
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:orion,orionmats minus Severity:6 minus Status:J,U,D,C,R,V">Q:</a>
-					</div>
-				</td>
-				<td>
-					<a href="orion123.pdf">29</a>
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:orion,orionmats minus Severity:4,5,6 minus Status:J,U,D,C,R,V">Q:</a>
-					</div>
-				</td>
-				<td>  </td>
-				<td>
-					<a href="orion_cfd.pdf">11</a>
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:orion,orionmats minus Severity:6  and Found:customer-use minus Status:J,U,D,C,R,V">Q:</a>
-					</div>
-				</td>
-				<td>
-					<a href="orion_sec.pdf">6</a>
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:orion,orionmats minus Severity:4,5,6  and ( Attribute~psirt OR Attribute~PSIRT ) minus Status:J,U,D,C,R,V">Q:</a>
-					</div>
-				</td>
-				<td>
-					<a href="orion_15sec.pdf">6</a>
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:orion,orionmats minus Severity:6  and ( Attribute~psirt OR Attribute~PSIRT ) minus Status:J,U,D,C,R,V">Q:</a>
-					</div>
-				</td>
-				<td colspan="3">
-					<!--<a
-                    href="orion_SECQS0Vmttr.pdf">--> <a href="http://wwwin-people.cisco.com/bhargavp/publish/test/new/Orion_mttr.jpeg">S0-S2 MTTR Chart</a>
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:orion,orionmats minus Severity:2,3,4,5,6  and ( Attribute~psirt OR Attribute~PSIRT ) and Attribute~InfoSec-S0 and Status:S{150104:} and Status:V{150104:}">Q:</a>
-					</div>
-				</td>
-
-				<!--<td>-->
-					<!--<a
-                    href="orion_SECQS1Vmttr.pdf">--><!--<a href="http://wwwin-people.cisco.com/bhargavp/publish/test/new/Orion_defects.jpeg">S0-S2 Defects-MTTR Chart</a>
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:orion,orionmats minus Severity:2,3,4,5,6 and ( Attribute~psirt OR Attribute~PSIRT ) minus Attribute~InfoSec-S0 and Status:S{150104:} and Status:V{150104:}">Q:</a>
-					</div>
-				</td>
-
-				<td>
-					<a
-                    href="orion_SECQS2Vmttr.pdf">TTR Chart</a>
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:orion,orionmats minus Severity:1,3,4,5,6  and ( Attribute~psirt OR Attribute~PSIRT ) and Status:S{150104:} and Status:V{150104:}">Q:</a>
-					</div>
-				</td>-->
-			</tr>
+	<h3>Defects search and analysis tool</h3>
+	<form id="QueryGeneratorForm" method="POST" action="QueryServlet" >
+		Project: 
+		<select name = "Project">
+  			<option  value="Trains" selected>Trains</option>
+ 			<option  value="Orion">Orion</option>
+  			<option  value="WebEx11">WebEx11</option>
+ 			<option  value="Cloud Services">Cloud Services</option>
+ 			<option  value="WebEx EOL">WebEx EOL</option>
+ 			<!-- <option  value="Meeting Place">Meeting Place</option> -->
+		</select>
+		
+		
+<!-- 		<input type="checkbox" name="Trains" />Trains &nbsp  -->
+<!-- 		<input type="checkbox" name="Orion" />Orion &nbsp  -->
+<!-- 		<input	type="checkbox" name="WebEx11" />WebEx11 &nbsp  -->
+<!-- 		<input	type="checkbox" name="Cloud Services" />Cloud Services &nbsp  -->
+<!-- 		<input	type="checkbox" name="WebEx EOL" />WebEx EOL &nbsp  -->
+<!-- 		<input	type="checkbox" name="Meeting Place" />Meeting Place &nbsp </br>  </br>  -->
+		</br>	</br>	
+		Severity: 
+		<input type="checkbox" name="S1" checked >S1  &nbsp 
+		<input type="checkbox" name="S2" checked >S2  &nbsp 
+		<input type="checkbox" name="S3" checked >S3  &nbsp 
+		<input type="checkbox" name="S4" checked >S4  &nbsp 
+		<input type="checkbox" name="S5" checked >S5  &nbsp 
+		<input type="checkbox" name="S6" checked >S6  &nbsp 
 			
-			<tr>
-				<td><b>WebEx11 </b></td>
-				<td>
-					<a href="w11_s1-s5.pdf">43</a>
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:webex11,wapi,cwcapi,cas,userservice,csapi,qd,cn,activityserver,feed,data-analytics,searchplatform,reporting,webex-doc,migration,osapi minus Severity:6 minus Status:J,U,D,C,R,V">Q:</a>
-					</div>
-				</td>
-				<td>
-					<a href="w11_s1-s3.pdf">31</a>
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:webex11,wapi,cwcapi,cas,userservice,csapi,qd,cn,activityserver,feed,data-analytics,searchplatform,reporting,webex-doc,migration,osapi minus Severity:4,5,6 minus Status:J,U,D,C,R,V">Q:</a>
-					</div>
-				</td>
-				<td>  </td>
-				<td>
-					<a href="w11_cfd.pdf">1</a>
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:webex11,wapi,cwcapi,cas,userservice,csapi,qd,cn,activityserver,feed,data-analytics,searchplatform,reporting,webex-doc,migration,osapi minus Severity:6 and Found:customer-use minus Status:J,U,D,C,R,V">Q:</a>
-					</div>
-				</td>
-				<td>
-					<a href="w11_sec.pdf">2</a>
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:webex11,wapi,cwcapi,cas,userservice,csapi,qd,cn,activityserver,feed,data-analytics,searchplatform,reporting,webex-doc,migration,osapi minus Severity:4,5,6 and ( Attribute~psirt or Attribute~PSIRT ) minus Status:J,U,D,C,R,V">Q:</a>
-					</div>
-				</td>
-				<td>
-					<a href="w11_15sec.pdf">7</a>
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:webex11,wapi,cwcapi,cas,userservice,csapi,qd,cn,activityserver,feed,data-analytics,searchplatform,reporting,webex-doc,migration,osapi minus Severity:6 and ( Attribute~psirt or Attribute~PSIRT ) minus Status:J,U,D,C,R,V">Q:</a>
-					</div>
-				</td>
-				<!--<td>
-					<a href="w11_SECQ13V.pdf">TTR Chart</a>
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:webex11,wapi,cwcapi,cas,userservice,csapi,qd,cn,activityserver,feed,data-analytics,searchplatform,reporting,webex-doc,migration,osapi minus Severity:3,4,5,6 and ( Attribute~psirt or Attribute~PSIRT ) and Status:V{150104:}">Q:</a>
-					</div>
-				</td>-->
-				<!--<td>
-                                        <a href="w11_SECQS0Vmttr.pdf">TTR Chart</a>
-                                        <div>
-                                                <a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:webex11,wapi,cwcapi,cas,userservice,csapi,qd,cn,activityserver,feed,data-analytics,searchplatform,reporting,webex-doc,migration,osapi minus Severity:2,3,4,5,6  and ( Attribute~psirt OR Attribute~PSIRT ) and Attribute~InfoSec-S0 and Status:S{150104:} and Status:V{150104:}">Q:</a>
-                                        </div>
-                                </td>
-
-                                <td>
-                                        <a href="w11_SECQS1Vmttr.pdf">TTR Chart</a>
-                                        <div>
-                                                <a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:webex11,wapi,cwcapi,cas,userservice,csapi,qd,cn,activityserver,feed,data-analytics,searchplatform,reporting,webex-doc,migration,osapi minus Severity:2,3,4,5,6 and ( Attribute~psirt OR Attribute~PSIRT ) minus Attribute~InfoSec-S0 and Status:S{150104:} and Status:V{150104:}">Q:</a>
-                                        </div>
-                                </td>
-
-                                <td>
-                                        <a href="w11_SECQS2Vmttr.pdf">TTR Chart</a>
-                                        <div>
-                                                <a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:webex11,wapi,cwcapi,cas,userservice,csapi,qd,cn,activityserver,feed,data-analytics,searchplatform,reporting,webex-doc,migration,osapi minus Severity:1,3,4,5,6  and ( Attribute~psirt OR Attribute~PSIRT ) and Status:S{150104:} and Status:V{150104:}">Q:</a>
-                                        </div>
-                                </td>-->
-				<td colspan="3">
-					<a href="test/new/Webex11_mttr.jpeg"> S0-S2 MTTR Chart</a>
-				</td>
-			</tr>
-
-			<tr>
-				<td><b>Cloud Services </b></td>
-				<td>
-					<a href="cs_s15.pdf">2</a>
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:system,management-tools,automation-tools,sv-test-center,cs-csgias minus Severity:6 minus Status:J,U,D,C,R,V">Q:</a>
-					</div>
-				</td>
-				<td>
-					<a href="cs_s13.pdf">2</a>
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:system,management-tools,automation-tools,sv-test-center,cs-csgias minus Severity:4,5,6 minus Status:J,U,D,C,R,V">Q:</a>
-					</div>
-				</td>
-				<td>  </td>
-				<td>
-					<a href="cs_cfd.pdf">1</a>
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:system,management-tools,automation-tools,sv-test-center,cs-csgias minus Severity:6  and Found:customer-use minus Status:J,U,D,C,R,V">Q:</a>
-					</div>
-				</td>
-				<td>
-					<a href="cs_sec.pdf">0</a>
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:system,management-tools,automation-tools,sv-test-center,cs-csgias minus Severity:4,5,6  and ( Attribute~psirt OR Attribute~PSIRT ) minus Status:J,U,D,C,R,V">Q:</a>
-					</div>
-				</td>
-				<td>
-					<a href="cs_15sec.pdf">0</a>
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:system,management-tools,automation-tools,sv-test-center,cs-csgias minus Severity:6  and ( Attribute~psirt OR Attribute~PSIRT ) minus Status:J,U,D,C,R,V">Q:</a>
-					</div>
-				</td>
-				<!--<td>
-					<a href="cs_SECQ13V.pdf">TTR Chart</a>
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:system,management-tools,automation-tools,sv-test-center,cs-csgias minus Severity:3,4,5,6  and ( Attribute~psirt OR Attribute~PSIRT ) and Status:V{150104:}">Q:</a>
-					</div>
-				</td>-->
-				<!--<td>
-                                        <a href="cs_SECQS0Vmttr.pdf">TTR Chart</a>
-                                        <div>
-                                                <a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:system,management-tools,automation-tools,sv-test-center,cs-csgias minus Severity:2,3,4,5,6  and ( Attribute~psirt OR Attribute~PSIRT ) and Attribute~InfoSec-S0 and Status:S{150104:} and Status:V{150104:}">Q:</a>
-                                        </div>
-                                </td>
-
-                                <td>
-                                        <a href="cs_SECQS1Vmttr.pdf">TTR Chart</a>
-                                        <div>
-                                                <a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:system,management-tools,automation-tools,sv-test-center,cs-csgias minus Severity:2,3,4,5,6 and ( Attribute~psirt OR Attribute~PSIRT ) minus Attribute~InfoSec-S0 and Status:S{150104:} and Status:V{150104:}">Q:</a>
-                                        </div>
-                                </td>
-
-                                <td>
-                                        <a href="cs_SECQS2Vmttr.pdf">TTR Chart</a>
-                                        <div>
-                                                <a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:system,management-tools,automation-tools,sv-test-center,cs-csgias minus Severity:1,3,4,5,6  and ( Attribute~psirt OR Attribute~PSIRT ) and Status:S{150104:} and Status:V{150104:}">Q:</a>
-                                        </div>
-                                </td>-->
-				<td colspan="3">
-					<a href="test/new/Cs_mttr.jpeg"> S0-S2 MTTR Chart </a>
-				</td>
-
-			</tr>
-
-			<tr>
-				<td><b>WebEx EOL </b></td>
-				<td>
-					<a href="wbxeol15.pdf">47</a>
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:unspecified,special,bps,others,is,quickbook,app-weboffice,pcnow,app-labs,meetmenow,weathermap,app-cust,artemis,app-intuit,none,qaforum,cloud-alpha,app-cisco-ipphone  minus Severity:6 minus Status:J,U,D,C,R,V">Q:</a>
-					</div>
-				</td>
-				<td>
-					<a href="wbxeol13.pdf">43</a>
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:unspecified,special,bps,others,is,quickbook,app-weboffice,pcnow,app-labs,meetmenow,weathermap,app-cust,artemis,app-intuit,none,qaforum,cloud-alpha,app-cisco-ipphone  minus Severity:4,5,6 minus Status:J,U,D,C,R,V">Q:</a>
-					</div>
-				</td>
-				<td>  </td>
-				<td>
-					<a href="wbxeolcfd.pdf">0</a>
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:unspecified,special,bps,others,is,quickbook,app-weboffice,pcnow,app-labs,meetmenow,weathermap,app-cust,artemis,app-intuit,none,qaforum,cloud-alpha,app-cisco-ipphone  minus Severity:6  and Found:customer-use minus Status:J,U,D,C,R,V">Q:</a>
-					</div>
-				</td>
-				<td>
-					<a href="wbxeolsec.pdf">1</a>
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:unspecified,special,bps,others,is,quickbook,app-weboffice,pcnow,app-labs,meetmenow,weathermap,app-cust,artemis,app-intuit,none,qaforum,cloud-alpha,app-cisco-ipphone  minus Severity:4,5,6 and ( Attribute~psirt OR Attribute~PSIRT ) minus Status:J,U,D,C,R,V">Q:</a>
-					</div>
-				</td>
-				<td>
-                	<a href="wbxeol15sec.pdf">1</a>
-               		<div>
-                		<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:unspecified,special,bps,others,is,quickbook,app-weboffice,pcnow,app-labs,meetmenow,weathermap,app-cust,artemis,app-intuit,none,qaforum,cloud-alpha,app-cisco-ipphone  minus Severity:6 and ( Attribute~psirt OR Attribute~PSIRT ) minus Status:J,U,D,C,R,V">Q:</a>
-               		</div>
-           		</td>
-           		<!--<td>
-					<a href="wbxeolSECQ13V.pdf">TTR Chart</a>
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:unspecified,special,bps,others,is,quickbook,app-weboffice,pcnow,app-labs,meetmenow,weathermap,app-cust,artemis,app-intuit,none,qaforum,cloud-alpha,app-cisco-ipphone  minus Severity:3,4,5,6 and ( Attribute~psirt OR Attribute~PSIRT ) and Status:V{150104:}">Q:</a>
-					</div>
-				</td>-->
-			        <!--<td>
-                                        <a href="wbxeol_SECQS0Vmttr.pdf">TTR Chart</a>
-                                        <div>
-                                                <a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:unspecified,special,bps,others,is,quickbook,app-weboffice,pcnow,app-labs,meetmenow,weathermap,app-cust,artemis,app-intuit,none,qaforum,cloud-alpha,app-cisco-ipphone minus Severity:2,3,4,5,6  and ( Attribute~psirt OR Attribute~PSIRT ) and Attribute~InfoSec-S0 and Status:S{150104:} and Status:V{150104:}">Q:</a>
-                                        </div>
-                                </td>
-
-                                <td>
-                                        <a href="wbxeol_SECQS1Vmttr.pdf">TTR Chart</a>
-                                        <div>
-                                                <a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:unspecified,special,bps,others,is,quickbook,app-weboffice,pcnow,app-labs,meetmenow,weathermap,app-cust,artemis,app-intuit,none,qaforum,cloud-alpha,app-cisco-ipphone minus Severity:2,3,4,5,6 and ( Attribute~psirt OR Attribute~PSIRT ) minus Attribute~InfoSec-S0 and Status:S{150104:} and Status:V{150104:}">Q:</a>
-                                        </div>
-                                </td>
-
-                                <td>
-                                        <a href="wbxeol_SECQS2Vmttr.pdf">TTR Chart</a>
-                                        <div>
-                                                <a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:unspecified,special,bps,others,is,quickbook,app-weboffice,pcnow,app-labs,meetmenow,weathermap,app-cust,artemis,app-intuit,none,qaforum,cloud-alpha,app-cisco-ipphone minus Severity:1,3,4,5,6  and ( Attribute~psirt OR Attribute~PSIRT ) and Status:S{150104:} and Status:V{150104:}">Q:</a>
-                                        </div>
-                                </td>-->
-				<td colspan="3">
-                                        <a href="test/new/Webexeol_mttr.jpeg"> S0-S2 MTTR Chart </a>
-                                </td>
+		</br> </br>
+		Status: 
+		
+		<input type="checkbox" name="S" checked >S  &nbsp 
+		<input type="checkbox" name="N" checked >N  &nbsp 
+		<input type="checkbox" name="A" checked >A  &nbsp 
+		<input type="checkbox" name="O" checked >O  &nbsp 
+		<input type="checkbox" name="W" checked >W  &nbsp 
+		<input type="checkbox" name="P" checked >P  &nbsp 
+		<input type="checkbox" name="H" checked >H  &nbsp 
+		<input type="checkbox" name="I" checked >I  &nbsp 
+		<input type="checkbox" name="M" checked >M  &nbsp 
+		<input type="checkbox" name="J"  >J  &nbsp 
+		<input type="checkbox" name="U"  >U  &nbsp 
+		<input type="checkbox" name="D"  >D  &nbsp 
+		<input type="checkbox" name="C"  >C  &nbsp 
+		<input type="checkbox" name="R"  >R  &nbsp 
+		<input type="checkbox" name="V"  >V  &nbsp 
+			
+		</br>
+		</br>
+		<!-- Beginning Date: <input type="date" name="Beginning Date"> &nbsp &nbsp 
+		Ending Date: <input type="date" name="Ending Date">  -->
+		
+		</br>
+		</br> <input type="submit" value="Run">
+	</form>
 	
-       		 </tr>
-       		 
-		<tr>
-			<td><b>Meeting Place </b></td>
-			<td>
-				<a href="mp15.pdf">2</a>
-				<div>
-					<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.voice and Product:meetingplace minus Severity:6 minus Status:J,U,D,C,R,V">Q:</a>
-				</div>
-			</td>
-			<td>
-				<a href="mp13.pdf">2</a>
-				<div>
-					<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.voice and Product:meetingplace minus Severity:4,5,6 minus Status:J,U,D,C,R,V">Q:</a>
-				</div>
-			</td>
-			<td>  </td>
-			<td>
-				<a href="mpcfd.pdf">2</a>
-				<div>
-					<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.voice and Product:meetingplace minus Severity:6  and Found:customer-use minus Status:J,U,D,C,R,V">Q:</a>
-				</div>
-			</td>
-			<td>
-				<a href="mpsec.pdf">0</a>
-				<div>
-					<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.voice and Product:meetingplace minus Severity:4,5,6 and ( Attribute~psirt OR Attribute~PSIRT ) minus Status:J,U,D,C,R,V">Q:</a>
-				</div>
-			</td>
-			<td>
-       		         	<a href="mp15sec.pdf">0</a>
-               			<div>
-                			<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.voice and Product:meetingplace minus Severity:6 and ( Attribute~psirt OR Attribute~PSIRT ) minus Status:J,U,D,C,R,V">Q:</a>
-               			</div>
-           		</td>
-           		<!--<td>
-					<a href="wbxeolSECQ13V.pdf">TTR Chart</a>
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:unspecified,special,bps,others,is,quickbook,app-weboffice,pcnow,app-labs,meetmenow,weathermap,app-cust,artemis,app-intuit,none,qaforum,cloud-alpha,app-cisco-ipphone  minus Severity:3,4,5,6 and ( Attribute~psirt OR Attribute~PSIRT ) and Status:V{150104:}">Q:</a>
-					</div>
-				</td>-->
-			        <!--<td>
-                                        <a href="wbxeol_SECQS0Vmttr.pdf">TTR Chart</a>
-                                        <div>
-                                                <a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:unspecified,special,bps,others,is,quickbook,app-weboffice,pcnow,app-labs,meetmenow,weathermap,app-cust,artemis,app-intuit,none,qaforum,cloud-alpha,app-cisco-ipphone minus Severity:2,3,4,5,6  and ( Attribute~psirt OR Attribute~PSIRT ) and Attribute~InfoSec-S0 and Status:S{150104:} and Status:V{150104:}">Q:</a>
-                                        </div>
-                                </td>
-
-                                <td>
-                                        <a href="wbxeol_SECQS1Vmttr.pdf">TTR Chart</a>
-                                        <div>
-                                                <a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:unspecified,special,bps,others,is,quickbook,app-weboffice,pcnow,app-labs,meetmenow,weathermap,app-cust,artemis,app-intuit,none,qaforum,cloud-alpha,app-cisco-ipphone minus Severity:2,3,4,5,6 and ( Attribute~psirt OR Attribute~PSIRT ) minus Attribute~InfoSec-S0 and Status:S{150104:} and Status:V{150104:}">Q:</a>
-                                        </div>
-                                </td>
-
-                                <td>
-                                        <a href="wbxeol_SECQS2Vmttr.pdf">TTR Chart</a>
-                                        <div>
-                                                <a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:unspecified,special,bps,others,is,quickbook,app-weboffice,pcnow,app-labs,meetmenow,weathermap,app-cust,artemis,app-intuit,none,qaforum,cloud-alpha,app-cisco-ipphone minus Severity:1,3,4,5,6  and ( Attribute~psirt OR Attribute~PSIRT ) and Status:S{150104:} and Status:V{150104:}">Q:</a>
-                                        </div>
-                                </td>-->
-			
-			<td colspan="3">
-                                <!--<a href="test/new/Webexeol_mttr.jpeg">--> S0-S2 MTTR Chart <!--</a>-->
-                        </td>
 	
-       		 </tr>
-
-       		 <tr>    
-	             <td>
-	                <b>Total </b>
-	             </td>
-	             <td>
-	                <a href="wbxtotals15.pdf">281</a>
-	               <div>
-	                	<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=file:/auto/orion2/cctg-bugs/workspace/wbxtotals15.bugs minus Status:J,U,D,C,R,V">Q:</a>
-	            	</div>
-	            </td>
-	            <td>
-	                <a href="wbxtotals13.pdf">197</a>
-	                <div>
-	                	<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=file:/auto/orion2/cctg-bugs/workspace/wbxtotals13.bugs minus Status:J,U,D,C,R,V">Q:</a>
-	            	</div>
-	            </td>
-	            <td>  </td>
-				<td>
-					<a href="wbxtotalcfd.pdf">28</a>
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=file:/auto/orion2/cctg-bugs/workspace/wbxtotalcfd.bugs minus Status:J,U,D,C,R,V">Q:</a>
-					</div>
-				</td>
-				<td>
-					<a href="wbxtotalsec.pdf">30</a>
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=file:/auto/orion2/cctg-bugs/workspace/wbxtotalsec.bugs minus Status:J,U,D,C,R,V">Q:</a>
-					</div>
-				</td>
-				<td>
-					<a href="wbxtotal15sec.pdf">43</a>
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=file:/auto/orion2/cctg-bugs/workspace/wbxtotal15sec.bugs minus Status:J,U,D,C,R,V">Q:</a>
-					</div>
-				</td>
-				<td colspan="3">
-                    			<a href="http://wwwin-people.cisco.com/bhargavp/publish/test/new/total_mttr.jpeg">S0-S2 MTTR Chart</a>
-                                        <div>
-                                                <a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg and Product:orion,orionmats minus Severity:2,3,4,5,6  and ( Attribute~psirt OR Attribute~PSIRT ) and Attribute~InfoSec-S0 and Status:S{150104:} and Status:V{150104:}">Q:</a>
-                                        </div>
-                                </td>
-				<td>
-				</td>
-				
-			</tr>
-
-			
-			<tr>
-				<td colspan="6" rowspan="1"></td>
-			</tr>
-
-			<tr>
-				<td><b>Bugs Not Covered By above Categories</b></td>
-				<td>
-					<a href="outcats15.pdf">761</a>
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=file:/auto/orion2/cctg-bugs/workspace/outcats15.bugs minus Status:J,U,D,C,R,V">Q:</a>
-					</div>
-				</td>
-				<td>
-					<a href="outcats13.pdf">358</a>
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=file:/auto/orion2/cctg-bugs/workspace/outcats13.bugs minus Status:J,U,D,C,R,V">Q:</a>
-					</div>
-				</td>
-				<td>  </td>
-				<td>
-					<a href="outcatcfd.pdf">23</a>
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=file:/auto/orion2/cctg-bugs/workspace/outcatcfd.bugs minus Status:J,U,D,C,R,V">Q:</a>
-					</div>
-				</td>
-				<td>
-					<a href="outcatsec.pdf">94</a>
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=file:/auto/orion2/cctg-bugs/workspace/outcatsec.bugs minus Status:J,U,D,C,R,V">Q:</a>
-					</div>
-				</td>
-				<td>
-					<a href="outcat15sec.pdf">103</a>
-					<div>
-						<a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=file:/auto/orion2/cctg-bugs/workspace/outcat15sec.bugs minus Status:J,U,D,C,R,V">Q:</a>
-					</div>
-				</td>
-				<td>
-				</td>
-			</tr>
-
-			<tr>
-				<td><b>CCTG Total</b></td>
-				<td>
-					<b><a href="ccatg_s1-s5-beg.pdf">1042</a></b>
-					<div><a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg minus Severity:6 OR ( Project:CSC.voice and Product:meetingplace minus Severity:6 ) minus Status:J,U,D,C,R,V">Q:</a></div>
-				</td>
-				<td>
-					<b><a href="ccatg_s1-s3.pdf">555</a></b>
-					<div><a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg minus Severity:6,5,4 OR ( Project:CSC.voice and Product:meetingplace minus Severity:4,5,6 ) minus Status:J,U,D,C,R,V">Q:</a></div>
-				</td>
-				<td>  </td>
-				<td>
-					<b><a href="ccatg_cfd.pdf">51</a></b>
-					<div><a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=Project:CSC.csg minus Severity:6  and Found:customer-use OR ( Project:CSC.voice and Product:meetingplace minus Severity:6  and Found:customer-use ) minus Status:J,U,D,C,R,V">Q:</a></div>
-				</td>
-				<td>
-					<b><a href="sec-s1-s3.pdf">124</a></b>
-					<div><a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=( Attribute~psirt OR Attribute~PSIRT ) and Project:CSC.csg minus Severity:4,5,6 OR ( Project:CSC.voice and Product:meetingplace minus Severity:4,5,6 and ( Attribute~psirt OR Attribute~PSIRT ) ) minus Status:J,U,D,C,R,V">Q:</a></div>
-				</td>
-				<td>
-					<b><a href="sec-s1-s5.pdf">146</a></b>
-					<div><a href="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert=( Attribute~psirt OR Attribute~PSIRT ) and Project:CSC.csg minus Severity:6 OR ( Project:CSC.voice and Product:meetingplace minus Severity:6 and ( Attribute~psirt OR Attribute~PSIRT ) ) minus Status:J,U,D,C,R,V">Q:</a></div>
-				</td>
-			</tr>
-			
-		</tbody>
-	</table>
-	<div>&nbsp;</div>
-
 </body>
 </html>
-Last Updated: Mon Jul 13 13:48:46 PDT 2015
