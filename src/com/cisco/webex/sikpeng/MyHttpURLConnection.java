@@ -5,8 +5,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
-import java.util.ArrayList;
-import java.util.List;
+
 
 
 import com.google.gson.Gson;
@@ -15,7 +14,7 @@ public class MyHttpURLConnection {
 	 
 	private final String USER_AGENT = "Mozilla/5.0";
  
-	public  void send(String query) throws Exception {
+	public String send(String query) throws Exception {
  
 		
 		
@@ -45,6 +44,7 @@ public class MyHttpURLConnection {
 		Bug[] bugs = gson.fromJson(r, Bug[].class);
 		
 		System.out.println("The query received " + bugs.length + " bugs.");
+		return r;
 	}
 	 
 		// HTTP GET request

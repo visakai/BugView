@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Search Bugs</title>
+<head>
+
+<style>
+
+
+
+</style>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"> </script>
+
+  <script type="text/javascript">
+	
+ $(document).ready(function(){
+    
+	$("#submit_button").click( function()  {
+       
+       $.ajax({
+            type: 'GET',
+            url: 'QueryServlet',
+            cache: false,
+            data: $('form').serialize(), 
+            beforeSend:function(){
+                $('#submit').html('<div class="center"><img src="ajax-loader.gif" alt="Searching..."></div>');
+              },
+            success: function (data) {  
+            	var obj = $.parseJSON(data);
+            	
+            	$("#result").html(obj.length + " bugs are found:"); 
+            	$('#submit').html('<div id="submit"><input class="center" id="submit_button" type="submit" value="Run"></div>'); 
+            	
+            	var d = drawTable(data);
+            } 
+       });
+            
+    });
+	
+	function drawTable(data){
+		
+		
+		var obj = $.parseJSON(data);
+		
+		var tbl=$("<table/>").attr("id","mytable");
+		 $("#div1").append(tbl);
+		
+		 
+		 for(var i=0;i<obj.length;i++)
+		 {
+		     var tr="<tr>";
+		     var td1="<td>"+obj[i]["id"]+"</td>";
+		     var td2="<td>"+obj[i]["Found"]+"</td>";
+		     var td3="<td>"+obj[i]["Status"]+"</td>";
+		     var td4="<td>"+obj[i]["Severity"]+"</td>";
+		     var td5="<td>"+obj[i]["Age"]+"</td>";
+		     var td6="<td>"+obj[i]["DE-manager"]+"</td>";
+		     var td7="<td>"+obj[i]["Component"]+"</td>";
+		     var td8="<td>"+obj[i]["Headline"]+"</td>";
+		     var td9="<td>"+obj[i]["Priority"]+"</td></tr>";
+
+		    $("#mytable").append(tr+td1+td2+td3+td4+td5+td6+td7+td8+td9); 
+		 }   
+			
+	}
+	
+});
+ 
+ 
+</script> 
+
+
+</head>
+
+
+<body>
+
+	<h3 class='center'>Defects search and analysis tool</h3>
+	
+	<form id="QueryGeneratorForm" method="GET"  >
+		Project: 
+		<select name = "Project">
+  			<option  value="Trains" selected>Trains</option>
+ 			<option  value="Orion">Orion</option>
+  			<option  value="WebEx11">WebEx11</option>
+ 			<option  value="Cloud Services">Cloud Services</option>
+ 			<option  value="WebEx EOL">WebEx EOL</option>
+ 			<!-- <option  value="Meeting Place">Meeting Place</option> -->
+		</select>
+		
+		
+	 	</br>	</br>	
+		Severity: 
+		<input type="checkbox" name="S1" checked >S1  &nbsp 
+		<input type="checkbox" name="S2" checked >S2  &nbsp 
+		<input type="checkbox" name="S3"  >S3  &nbsp 
+		<input type="checkbox" name="S4"  >S4  &nbsp 
+		<input type="checkbox" name="S5"  >S5  &nbsp 
+		<input type="checkbox" name="S6"  >S6  &nbsp 
+			
+		</br> </br>
+		Status: 
+		
+		<input type="checkbox" name="S" checked >S  &nbsp 
+		<input type="checkbox" name="N" checked >N  &nbsp 
+		<input type="checkbox" name="A"  >A  &nbsp 
+		<input type="checkbox" name="O"  >O  &nbsp 
+		<input type="checkbox" name="W"  >W  &nbsp 
+		<input type="checkbox" name="P"  >P  &nbsp 
+		<input type="checkbox" name="H"  >H  &nbsp 
+		<input type="checkbox" name="I"  >I  &nbsp 
+		<input type="checkbox" name="M"  >M  &nbsp 
+		<input type="checkbox" name="J"  >J  &nbsp 
+		<input type="checkbox" name="U"  >U  &nbsp 
+		<input type="checkbox" name="D"  >D  &nbsp 
+		<input type="checkbox" name="C"  >C  &nbsp 
+		<input type="checkbox" name="R"  >R  &nbsp 
+		<input type="checkbox" name="V"  >V  &nbsp 
+			
+		</br>
+		</br>
+		
+		<!-- Beginning Date: <input type="date" name="Beginning Date"> &nbsp &nbsp 
+		Ending Date: <input type="date" name="Ending Date"> 
+		 -->
+		</br>
+		</br> 
+	   
+		 
+	</form>
+	
+	<div id="submit"><input class="center" id="submit_button" type="submit" value="Run"></div>
+	
+	 
+	</br> </br> 
+	
+	<div id= "result"></div>
+	
+	<form id="form1">
+      <table id="myGrid"></table>
+      <div id="pager"></div>
+    </form>
+	
+	<div id="div1">
+		<table id = "mytable">
+		 <tr>
+		 	<th>id</th>
+		 	<th>Found</th>
+		 	<th>Status</th>
+		 	<th>Severity</th>
+		 	<th>Age</th>
+		 	<th>DE-manager</th>
+		 	<th>Component</th>
+		 	<th>Headline</th>
+		 	<th>Priority</th>
+		 	
+		 </tr>
+		</table>
+	</div>
+
+</body>
+</html>

@@ -33,16 +33,21 @@ public class QueryServlet extends HttpServlet {
 		
 		
 		MyHttpURLConnection http = new MyHttpURLConnection ();
-		
+		String s = "";
 		try {
-			http.send(query);
+			s = http.send(query);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		//System.out.println("in query servlet, bug number = " + bugNumber);
 		
+		response.setContentType("text/plain");  
+		response.setCharacterEncoding("UTF-8");
+
+		response.getWriter().write(s);
 		
-		response.getWriter().append(query);
+		System.out.println("end of query servlet");
 	}
 
 	/**
