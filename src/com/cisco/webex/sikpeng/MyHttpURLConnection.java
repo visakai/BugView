@@ -20,7 +20,8 @@ public class MyHttpURLConnection {
 		
 		
 		//encode the query
-		
+		System.out.println("Query received in MyHttpURLConnection:");
+		System.out.println(query);
 		String uri ="http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert="+ URLEncoder.encode(query, "UTF-8") + "&type=json";
 		System.out.println("Query UrlEncoded:");
 		System.out.println(uri);

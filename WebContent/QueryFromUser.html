@@ -3,14 +3,79 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Put Your Query Here</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"> </script>
+
+<script type="text/javascript">
+	
+ $(document).ready(function(){
+    
+	$("#submit_button").click( function()  {
+       
+       $.ajax({
+            type: 'GET',
+            url: 'QueryFromUserServlet',
+            cache: false,
+            data: $('form').serialize(), 
+            beforeSend:function(){
+                $('#submit').html('<div class="center"><img src="ajax-loader.gif" alt="Searching..."></div>');
+              },
+            success: function (data) {  
+            	var obj = $.parseJSON(data);
+            	
+            	$("#result").html(obj.length + " bugs are found:"); 
+            	$('#submit').html('<div id="submit"><input class="center" id="submit_button" type="submit" value="Run"></div>'); 
+            	
+            	var d = drawTable(data);
+            } 
+       });
+            
+    });
+	
+	function drawTable(data){
+		
+		var obj = $.parseJSON(data);
+		
+		var tbl=$("<table/>").attr({"id":"mytable","border":"3"});
+		 $("#div1").append(tbl);
+		
+		 $("#mytable").append("<tr><th>id</th><th>Found</th><th>Status</th><th>Severity</th><th>Age</th><th>DE-manager</th><th>Component</th><th>Headline</th><th>Priority</th></tr>");
+		 
+		 for(var i=0;i<obj.length;i++)
+		 {
+		     var tr="<tr>";
+		     var td1="<td>"+obj[i]["id"]+"</td>";
+		     var td2="<td>"+obj[i]["Found"]+"</td>";
+		     var td3="<td>"+obj[i]["Status"]+"</td>";
+		     var td4="<td>"+obj[i]["Severity"]+"</td>";
+		     var td5="<td>"+obj[i]["Age"]+"</td>";
+		     var td6="<td>"+obj[i]["DE-manager"]+"</td>";
+		     var td7="<td>"+obj[i]["Component"]+"</td>";
+		     var td8="<td>"+obj[i]["Headline"]+"</td>";
+		     var td9="<td>"+obj[i]["Priority"]+"</td></tr>";
+
+		    $("#mytable").append(tr+td1+td2+td3+td4+td5+td6+td7+td8+td9); 
+		 }   
+	}
+});
+
+</script> 
+
 </head>
 <body>
+<form>
 <label>Query Name:</label></br>
-<textarea rows="1" cols="30" placeholder="Optional"></textarea></br></br>
+<textarea name="queryId" rows="1" cols="30" placeholder="Required"></textarea></br></br>
 <label>Query Content:</label></br>
-<textarea rows="10" cols="50" placeholder="Please put your query here..."></textarea></br>
-
+<textarea name="query" rows="10" cols="50" placeholder="Please put your query here..."></textarea></br>
+</form>
 </br>
-<div id="submit"><input  id="submit_button" type="submit" value="Add"></div>
+<div id="submit"><input  id="submit_button" type="submit" value="Add"></div></br></br>
+<div id= "result"></div>
+	
+	
+	<div id="div1">
+		<table id = "mytable"></table>
+	</div>
 </body>
 </html>
