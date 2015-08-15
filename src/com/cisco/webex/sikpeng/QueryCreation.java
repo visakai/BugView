@@ -3,9 +3,7 @@ package com.cisco.webex.sikpeng;
 import javax.servlet.http.HttpServletRequest;
 
 public class QueryCreation {
-	public static void main(String[] args) {
-
-	}
+	
 
 	public String create(HttpServletRequest request) {
 

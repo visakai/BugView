@@ -2,6 +2,7 @@
     <wb-module deploy-name="BugView">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/WebContent/resource"/>
         <property name="context-root" value="BugView"/>
         <property name="java-output-path" value="/BugView/build/classes"/>
     </wb-module>
