@@ -29,9 +29,8 @@ public class UpdateServlet extends HttpServlet {
 	public void init() throws ServletException {
 
 		Timer timer = new Timer(); // Instantiate Timer Object
-		ScheduledTask st = new ScheduledTask(); // Instantiate SheduledTask
-												// class
-		timer.schedule(st, 0, 1000 * 30); // Create Repetitively (1 secs = 1000)
+		ScheduledTask st = new ScheduledTask(); // Instantiate SheduledTask class
+		timer.schedule(st, 1000*60, 1000 * 10); //(task, delay in milisecond, interval period in milisecond) Create Repetitively (1 secs = 1000)
 
 	}
 

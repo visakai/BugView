@@ -5,3 +5,11 @@ Trains_sec;Project:CSC.csg and Product:thin-client,magicboat,cca-portal,systools
 Orion123;Project:CSC.csg and Product:orion,orionmats minus Severity:4,5,6 minus Status:J,U,D,C,R,V;12
 Cs_cfd;Project:CSC.csg and Product:system,management-tools,automation-tools,sv-test-center,cs-csgias minus Severity:6  and Found:customer-use minus Status:J,U,D,C,R,V;53
 Mp13;Project:CSC.voice and Product:meetingplace minus Severity:4,5,6 minus Status:J,U,D,C,R,V;1
+test1;Project:CSC.voice and Product:meetingplace minus Severity:4,5,6 minus Status:J,U,D,C,R,V;1
+test2;Project:CSC.voice and Product:meetingplace minus Severity:4,5,6 minus Status:J,U,D,C,R,V;1
+teset3;Project:CSC.voice and Product:meetingplace minus Severity:4,5,6 minus Status:J,U,D,C,R,V;1
+tst4;Project:CSC.voice and Product:meetingplace minus Severity:4,5,6 minus Status:J,U,D,C,R,V;1
+t5;Project:CSC.voice and Product:meetingplace minus Severity:4,5,6 minus Status:J,U,D,C,R,V;1
+t6;Project:CSC.voice and Product:meetingplace minus Severity:4,5,6 minus Status:J,U,D,C,R,V;1
+t7;Project:CSC.voice and Product:meetingplace minus Severity:4,5,6 minus Status:J,U,D,C,R,V;1
+t8;Project:CSC.voice and Product:meetingplace minus Severity:4,5,6 minus Status:J,U,D,C,R,V;1

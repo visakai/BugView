@@ -2,9 +2,14 @@
 var currentBugNumber;
 var lineOddEven;
 var odd_even;
+var minAgo;
 
 function loadPage() {
-	getCSVDataFromBackEnd()
+	
+	getCSVDataFromBackEnd();
+	getPropDataFromBackEnd();
+	setInterval(updateMinAgo, 1000 * 60); // minAgo + 1 every min
+		
 }
 
 function getCSVDataFromBackEnd(){
@@ -28,6 +33,31 @@ function getCSVDataFromBackEnd(){
 	       });	   
 }
 
+//to update the time information
+function getPropDataFromBackEnd(){
+	
+    $.ajax({
+          type: 'GET',
+          url: 'ReadPropServlet',
+          cache: false,
+          success: function (response) { 
+        	     $("#updateFrequency").html( response.updateFrequency ); 	
+		         var date = new Date( response.lastUpdated * 1000);
+		         var hours = date.getHours();
+		         var minutes = "0" + date.getMinutes();
+		         var formattedTime = hours + ':' + minutes.substr(-2);
+		         $('#lastUpdated').html(formattedTime);
+		         minAgo = Math.ceil ( ( Date.now()/1000 - response.lastUpdated ) / 60 );
+		         $('#minAgo').html(minAgo);
+          	
+          } 
+     });	   
+}
+
+function updateMinAgo() {
+	minAgo++;
+	$('#minAgo').html(minAgo);
+}
 
 					/*$("#submit_button").click( function()  {
 					       
@@ -176,9 +206,7 @@ function doAdd(){
 	        'currentBugNumber':  currentBugNumber
         },
         success: function (response) { 
-        		
-        		
-        	    
+        		        	    
         		//clear message area, warning area
         	    $('#checkMark').html("");
         		$('#UniqueIDMessage').html("");
@@ -186,6 +214,7 @@ function doAdd(){
         		$('#QueryMessage').html("");
         		
         		//add to UI
+        		lineOddEven = ! lineOddEven;
         		 if(lineOddEven){
         			 odd_even = 'odd';
         		 } else {
@@ -197,6 +226,9 @@ function doAdd(){
         		//clear textarea
         		$('#queryId').val('');
         	    $('#query').val('');
+        	    //enable textarea
+        	    $('#queryId').prop('disabled', false);
+                $('#query').prop('disabled', false);
         }
    });	
 }

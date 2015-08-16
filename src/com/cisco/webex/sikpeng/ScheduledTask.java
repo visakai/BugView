@@ -10,16 +10,16 @@ public class ScheduledTask extends TimerTask {
  
 	// Add your task here
 	public void run() {
-		start = new Date(); // initialize date
-		System.out.println("Time is : " + start); // Display current time
 		
 		//1, record current start time
+		start = new Date(); // initialize date
+		System.out.println("Start time is : " + start); // Display current time
 		
-		//2, read the first line from properties file
+		//2, read the first line from CSV file
 		
-		//3 parse the line, get query content and send the query out and get result bugNumber back
+		//3 parse the line, get ID and query and send the query out and get result bugNumber back
 		
-		//4 save the bugNumber and queryID, querycontent to  map in memory
+		//4 save the bugNumber and queryID to Json object in memory
 		
 		// read next line, repeat
 		
@@ -27,13 +27,15 @@ public class ScheduledTask extends TimerTask {
 		
 		// record finished time
 		
-		// delete original properties file 
+		// delete original CSV file 
 		
-		// write updated data to properties file
+		// write updated data to CSV file
+		
+		//write lastUpdate time to properties file
 		
 		// clear  map etc
 		
-		//automatically refresh the page, let html page pick up properties values, and display timestamp   This is the same if the page loads or user refresh page.
+		// finished
 		
 	}
 }

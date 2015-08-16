@@ -9,6 +9,14 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  <!-- automatically run when tomcat bootup -->
+  <servlet>
+    <servlet-name>UpdateServlet</servlet-name>
+    <servlet-class>com.cisco.webex.sikpeng.servlet.UpdateServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+</servlet>
+
   <servlet>
     <servlet-name>QueryServlet</servlet-name>
     <servlet-class>com.cisco.webex.sikpeng.QueryServlet</servlet-class>
