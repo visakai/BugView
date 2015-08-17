@@ -226,8 +226,9 @@ function doAdd(){
         			 odd_even = 'even';
         		 }
         		
-        		$('#result-table tr:last').after("<tr class='"+ odd_even +"'><td>" +  $('#queryId').val() + "</td><td>" +  $('#query').val() + "</td><td class='center'>" + currentBugNumber + "</td><td class='center'><img src='chart.png' heihgt='30' width='30'></td></tr>");
-        	    
+        		$('#result-table tr:last').after("<tr class='"+ odd_even +"'><td>" +  $('#queryId').val() + "</td><td><a  onclick='openQueryPage(this)' href='#'>" +  $('#query').val() + "</a></td><td class='center' ><a id= '" + $('#query').val() + "'  onclick='drawBugTable(this)' href='#'>" + currentBugNumber + "</a></td><td class='center'><img src='chart.png' heihgt='30' width='30'></td></tr>");
+        	  //$('#result-table tr:last').after("<tr class='"+ odd_even +"'><td>" + response[i].id + "     </td><td><a  onclick='openQueryPage(this)' href='#'>" + response[i].query + "</a></td><td class='center' ><a id= '" + response[i].query + "'  onclick='drawBugTable(this)' href='#'>" + response[i].bug + "</a></td>   <td class='center'><img src='chart.png' heihgt='30' width='30'></td></tr>");
+	            
         		//clear textarea
         		$('#queryId').val('');
         	    $('#query').val('');
