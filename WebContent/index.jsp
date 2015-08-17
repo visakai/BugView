@@ -19,7 +19,7 @@
 	<div id='title'>
 		<img id='left-corner' class="left" src="bug4.png" height="40"
 			width="40">
-		<h2 class="center">CCTG Automatic Defect Report</h2>
+		<h2 class="center">Automatic Defect Report Tool</h2>
 		<img id='right-corner' class="right" src="bug4right.png" height="40"
 			width="40">
 	</div>
@@ -28,7 +28,7 @@
 		<caption>Updated every <label id='updateFrequency'></label> min. Last updated at <label id='lastUpdated'></label> (Took <label id='batchTimeInMin'></label> min. <label id='minAgo'></label> min ago).</caption>
 		<tr>
 			<th width='20%'>ID</th>
-			<th width='60%'>Query (<span id='expand_fold_span'><label class='link' onclick='expand()'>Expand +</label></span>)</th>
+			<th width='60%'>Query (<span id='expand_fold_span'><a  onclick='expand()' href='#'>Expand +</a></span>)</th>
 			<th width='10%'>Bug</th>
 			<th width='10%'>Chart</th>
 		</tr>

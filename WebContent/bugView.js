@@ -12,6 +12,7 @@ function loadPage() {
 		
 }
 
+//populate the result table based on server side csv data
 function getCSVDataFromBackEnd(){
 	      $.ajax({
 	            type: 'GET',
@@ -26,7 +27,7 @@ function getCSVDataFromBackEnd(){
 	            		 } else {
 	            			 odd_even = 'even';
 	            		 }
-	            		$('#result-table tr:last').after("<tr class='"+ odd_even +"'><td>" + response[i].id + "</td><td>" + response[i].query + "</td><td class='center' ><label id= '" + response[i].query + "' class='link' onclick='drawBugTable(this)' >" + response[i].bug + "</label></td><td class='center'><img src='chart.png' heihgt='30' width='30'></td></tr>");
+	            		$('#result-table tr:last').after("<tr class='"+ odd_even +"'><td>" + response[i].id + "</td><td><a  onclick='openQueryPage(this)' href='#'>" + response[i].query + "</a></td><td class='center' ><a id= '" + response[i].query + "'  onclick='drawBugTable(this)' href='#'>" + response[i].bug + "</a></td><td class='center'><img src='chart.png' heihgt='30' width='30'></td></tr>");
 	            	}
 	            	
 	            } 
@@ -43,10 +44,12 @@ function getPropDataFromBackEnd(){
           success: function (response) { 
         	     $("#updateFrequency").html( response.updateFrequency ); 	
 		         var date = new Date( response.lastUpdated * 1000);
-		         var hours = date.getHours();
-		         var minutes = "0" + date.getMinutes();
-		         var formattedTime = hours + ':' + minutes.substr(-2);
-		         $('#lastUpdated').html(formattedTime);
+		         //var year = data.getYear();
+		         //var hours = date.getHours();
+		         
+		         //var minutes = "0" + date.getMinutes();
+		        // var formattedTime = hours + ':' + minutes.substr(-2);
+		         $('#lastUpdated').html(date);
 		         $("#batchTimeInMin").html( response.batchTimeInMin ); 	
 		         minAgo = Math.ceil ( ( Date.now()/1000 - response.lastUpdated ) / 60 );
 		         $('#minAgo').html(minAgo);
@@ -238,16 +241,23 @@ function doAdd(){
 
 function expand () {
 	 $("td").css("white-space","normal");
-	 $('#expand_fold_span').html("<label class='link' onclick='fold()'>Fold -</label>");
+	 $('#expand_fold_span').html("<a  onclick='fold()' href='#'>Fold -</a>");
+	 
 }
 
 function fold () {
 	 $("td").css("white-space","nowrap");
-	 $('#expand_fold_span').html("<label class='link' onclick='expand()'>Expand +</label>");
+	 $('#expand_fold_span').html("<a  onclick='expand()' href='#'>Expand +</a>");
 }
 
 function drawBugTable(caller) {
 	var uri = "http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert="  + encodeURIComponent(caller.id) + "&type=directweb";
 	window.open(uri);
-	}
+}
+
+function openQueryPage(caller) {
+	var uri = "http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert="  + encodeURIComponent($(caller).text()) ;
+	window.open(uri);
+	
+}
 

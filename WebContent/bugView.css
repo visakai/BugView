@@ -1,7 +1,7 @@
  * {
  	border: 0px solid navy;
  	font-family: Arial, Helvetica, sans-serif;
- 	color:navy;
+ 	color:black;
 }
 
 .red {
@@ -44,7 +44,6 @@
 
 
 th { 
-	color: navy;
 	background-color: #FFA347;
 }
 
@@ -83,9 +82,8 @@ h3 {
 	text-align: center;
 }
 
-.link {
-	text-decoration: underline;
-	color:blue;
+a {
+	color:navy;
 }
 
 #input-table {
