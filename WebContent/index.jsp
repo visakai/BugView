@@ -25,7 +25,7 @@
 	</div>
 
 	<table id="result-table" class="outset">
-		<caption>Automatically updated every <label id='updateFrequency'></label> min. Last updated at <label id='lastUpdated'></label> (Took <label id='batchTimeInMin'></label> min. <label id='minAgo'></label> min ago).</caption>
+		<caption>Updated every <label id='updateFrequency'></label> min. Last updated at <label id='lastUpdated'></label> (Took <label id='batchTimeInMin'></label> min. <label id='minAgo'></label> min ago).</caption>
 		<tr>
 			<th width='20%'>ID</th>
 			<th width='60%'>Query (<span id='expand_fold_span'><label class='link' onclick='expand()'>Expand +</label></span>)</th>

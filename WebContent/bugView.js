@@ -26,7 +26,7 @@ function getCSVDataFromBackEnd(){
 	            		 } else {
 	            			 odd_even = 'even';
 	            		 }
-	            		$('#result-table tr:last').after("<tr class='"+ odd_even +"'><td>" + response[i].id + "</td><td>" + response[i].query + "</td><td class='center'>" + response[i].bug + "</td><td class='center'><img src='chart.png' heihgt='30' width='30'></td></tr>");
+	            		$('#result-table tr:last').after("<tr class='"+ odd_even +"'><td>" + response[i].id + "</td><td>" + response[i].query + "</td><td class='center' ><label id= '" + response[i].query + "' class='link' onclick='drawBugTable(this)' >" + response[i].bug + "</label></td><td class='center'><img src='chart.png' heihgt='30' width='30'></td></tr>");
 	            	}
 	            	
 	            } 
@@ -245,3 +245,9 @@ function fold () {
 	 $("td").css("white-space","nowrap");
 	 $('#expand_fold_span').html("<label class='link' onclick='expand()'>Expand +</label>");
 }
+
+function drawBugTable(caller) {
+	var uri = "http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert="  + encodeURIComponent(caller.id) + "&type=directweb";
+	window.open(uri);
+	}
+

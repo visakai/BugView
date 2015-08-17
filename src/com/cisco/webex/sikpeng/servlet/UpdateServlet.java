@@ -37,7 +37,7 @@ public class UpdateServlet extends HttpServlet {
 		JsonObject j = handleProp.getPropAsJson();
 		int updateFrequency = j.get("updateFrequency").getAsInt();
 		
-		timer.schedule(st, 1000*60*5, 1000*60*updateFrequency); //(task, delay in milisecond, interval period in milisecond) Create Repetitively (1 secs = 1000)
+		timer.schedule(st, 1000*60*100, 1000*60*updateFrequency); //(task, delay in milisecond, interval period in milisecond) Create Repetitively (1 secs = 1000)
 
 	}
 
