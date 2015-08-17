@@ -47,8 +47,10 @@ function getPropDataFromBackEnd(){
 		         var minutes = "0" + date.getMinutes();
 		         var formattedTime = hours + ':' + minutes.substr(-2);
 		         $('#lastUpdated').html(formattedTime);
+		         $("#batchTimeInMin").html( response.batchTimeInMin ); 	
 		         minAgo = Math.ceil ( ( Date.now()/1000 - response.lastUpdated ) / 60 );
 		         $('#minAgo').html(minAgo);
+		         
           	
           } 
      });	   

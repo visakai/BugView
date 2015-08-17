@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.cisco.webex.sikpeng.ScheduledTask;
+import com.cisco.webex.sikpeng.util.HandleProp;
+import com.google.gson.JsonObject;
 
 /**
  * Servlet implementation class UpdateServlet
@@ -29,8 +31,13 @@ public class UpdateServlet extends HttpServlet {
 	public void init() throws ServletException {
 
 		Timer timer = new Timer(); // Instantiate Timer Object
-		ScheduledTask st = new ScheduledTask(); // Instantiate SheduledTask class
-		timer.schedule(st, 1000*60, 1000 * 10); //(task, delay in milisecond, interval period in milisecond) Create Repetitively (1 secs = 1000)
+		ScheduledTask st = new ScheduledTask(); 		// Instantiate SheduledTask class
+		
+		HandleProp handleProp = new HandleProp();
+		JsonObject j = handleProp.getPropAsJson();
+		int updateFrequency = j.get("updateFrequency").getAsInt();
+		
+		timer.schedule(st, 1000*60*5, 1000*60*updateFrequency); //(task, delay in milisecond, interval period in milisecond) Create Repetitively (1 secs = 1000)
 
 	}
 

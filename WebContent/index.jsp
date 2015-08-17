@@ -25,7 +25,7 @@
 	</div>
 
 	<table id="result-table" class="outset">
-		<caption>Automatically updated every <label id='updateFrequency'></label> min. Last updated at <label id='lastUpdated'></label> (<label id='minAgo'></label> min ago).</caption>
+		<caption>Automatically updated every <label id='updateFrequency'></label> min. Last updated at <label id='lastUpdated'></label> (Took <label id='batchTimeInMin'></label> min. <label id='minAgo'></label> min ago).</caption>
 		<tr>
 			<th width='20%'>ID</th>
 			<th width='60%'>Query (<span id='expand_fold_span'><label class='link' onclick='expand()'>Expand +</label></span>)</th>
@@ -49,7 +49,7 @@
 			<tr>
 				<td class='name top noborder' id='queryContentLabel'>Query:</td>
 				<td class='box noborder'><textarea name="query" class='inset'
-						id="query" rows="10" placeholder="Please put your query here..."></textarea></td>
+						id="query" rows="10" placeholder="Please put your QDDTS query here..."></textarea></td>
 				<td id='querycheckMark' class='sign noborder ' width="4%"></td>
 				<td id='QueryMessage' class='sign noborder ' width="16%"></td>
 			</tr>
