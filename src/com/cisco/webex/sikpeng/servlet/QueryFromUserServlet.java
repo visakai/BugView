@@ -39,12 +39,15 @@ public class QueryFromUserServlet extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-				
-		response.setContentType("text/plain");  
-		response.setCharacterEncoding("UTF-8");
-
-		response.getWriter().write(s);
 		
+		if(s.startsWith("<html>")) {
+			response.setStatus(400);
+			response.getWriter().write("Bad Request");
+		}else {	
+			response.setContentType("text/plain");  
+			response.setCharacterEncoding("UTF-8");
+			response.getWriter().write(s);
+		}
 		System.out.println("end of QueryFromUserServlet");
 	}
 

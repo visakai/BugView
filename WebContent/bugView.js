@@ -168,7 +168,23 @@ function doTest(){
 	            	
 	            	//enable add button
 	            	$('#add_button').prop('disabled', false);
-	            } 
+	            },
+	            
+	              error: function(xhr){
+	                  //alert("An error occured: " + xhr.status + " " + xhr.statusText);
+	            	  // show error mark and message
+	            	  $('#querycheckMark').html("<img src='no.png' height='20px' width='20px'>");
+	            	  $("#QueryMessage").html("Invalid query"); 
+	            	  
+	            	//re-show test button
+		            $('#test_button_span').html("<button id='test_button' type='button' onclick = 'doTest()'>Test</button>"); 
+		            
+		            //enable two textareas, so that the user can modify the query
+	                $('#queryId').prop('disabled', false);
+	                $('#query').prop('disabled', false);
+		            
+	              }
+	              
 	       });
 	}
 }
