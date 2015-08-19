@@ -27,7 +27,7 @@ function getCSVDataFromBackEnd(){
 	            		 } else {
 	            			 odd_even = 'even';
 	            		 }
-	            		$('#result-table tr:last').after("<tr class='"+ odd_even +"'><td>" + response[i].id + "</td><td><a  onclick='openQueryPage(this)' href='#'>" + response[i].query + "</a></td><td class='center' ><a id= '" + response[i].query + "'  onclick='drawBugTable(this)' href='#'>" + response[i].bug + "</a></td><td class='center'><img src='chart.png' heihgt='30' width='30'></td></tr>");
+	            		$('#result-table tr:last').after("<tr class='"+ odd_even +"'><td>" + response[i].id + "</td><td><a  onclick='openQueryPage(this)' href='#'>" + response[i].query + "</a></td><td class='center' ><a id= '" + response[i].query + "'  onclick='drawBugTable(this)' href='#'>" + response[i].bug + "</a></td><td class='center'><a id= " + response[i].id + " href='#' onclick='showChart(this)'><img src='chart.png' height='30' width='30'></td></tr>");
 	            	}
 	            	
 	            } 
@@ -242,7 +242,7 @@ function doAdd(){
         			 odd_even = 'even';
         		 }
         		
-        		$('#result-table tr:last').after("<tr class='"+ odd_even +"'><td>" +  $('#queryId').val() + "</td><td><a  onclick='openQueryPage(this)' href='#'>" +  $('#query').val() + "</a></td><td class='center' ><a id= '" + $('#query').val() + "'  onclick='drawBugTable(this)' href='#'>" + currentBugNumber + "</a></td><td class='center'><img src='chart.png' heihgt='30' width='30'></td></tr>");
+        		$('#result-table tr:last').after("<tr class='"+ odd_even +"'><td>" +  $('#queryId').val() + "</td><td><a  onclick='openQueryPage(this)' href='#'>" +  $('#query').val() + "</a></td><td class='center' ><a id= '" + $('#query').val() + "'  onclick='drawBugTable(this)' href='#'>" + currentBugNumber + "</a></td><td class='center'><a id= " + $('#queryId').val() + " href='#' onclick='showChart(this)'><img src='chart.png' height='30' width='30'></td></tr>");
         	  //$('#result-table tr:last').after("<tr class='"+ odd_even +"'><td>" + response[i].id + "     </td><td><a  onclick='openQueryPage(this)' href='#'>" + response[i].query + "</a></td><td class='center' ><a id= '" + response[i].query + "'  onclick='drawBugTable(this)' href='#'>" + response[i].bug + "</a></td>   <td class='center'><img src='chart.png' heihgt='30' width='30'></td></tr>");
 	            
         		//clear textarea
@@ -276,5 +276,17 @@ function openQueryPage(caller) {
 	var uri = "http://wwwin-metrics.cisco.com/cgi-bin/ddts_query.cgi?expert="  + encodeURIComponent($(caller).text()) ;
 	window.open(uri);
 	
+}
+
+function showChart(caller) {
+	//alert(caller.id +' in show chart');
+	$('#chartDialog').dialog({
+		height:'auto',
+		width: 'auto',
+		show: { effect: "scale", duration: 1000 },
+		hide: { effect: "scale", duration: 1000 },
+		
+		
+	});
 }
 

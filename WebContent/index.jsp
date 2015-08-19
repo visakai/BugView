@@ -4,13 +4,16 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="bugView.css">
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css"> 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Bug View</title>
 <script	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 <script src="bugView.js"></script>
 <script type="text/javascript">
 	jQuery(document).ready(function() {
 		loadPage();
+		 
 	});
 </script>
 </head>
@@ -60,6 +63,12 @@
 			<button id="add_button" type="button" disabled onclick='doAdd()'>Add</button>
 		</div>
 		<div id='result_msg' class='center'></div>
+		
+		<div id="chartDialog" title="Defects Analysis Trend Chart" style="display: none">
+ 			 <img src="image/chart1.png" height="100%" width="100%">
+ 			
+		</div>
+
 	</form>
 </body>
 </html>
